@@ -13,7 +13,6 @@ app.use(express.static("public"));
 
 const ProductManager = new ProductManagerExternal("./productos.json");
 
-
 app.get("/products", async (req, res) => {
     const { limit } = req.query;
     const productos = await ProductManager.getProducts();
